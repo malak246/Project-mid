@@ -20,6 +20,23 @@ while True:
                             continue
     for i in range(size):
         ID = input("Enter The ID Of Menu: ")
+        while True:
+                     upperChar=False
+                     lowerChar=False
+                     numberChar=False
+                     if len(ID)>=6:
+                      for i in ID:
+                            if i.isupper():
+                                   upperChar=True
+                            elif i.islower():
+                                   lowerChar=True
+                            elif i.isdigit():
+                                   numberChar=True
+                     if upperChar and lowerChar and numberChar:
+                                   pass
+                     else:
+                                   ID = input("Enter The ID Of Menu: ")
+                                   break
         Name=input('Enter Name: ')
         while True:            
                     try: 
